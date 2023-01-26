@@ -7,6 +7,9 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    const amount = parseInt(count)
+    console.log(amount)
+    setText(texts.slice(0, amount))
   }
   return (
     <section className="section-center">
@@ -26,21 +29,11 @@ function App() {
           </button>
         </label>
       </form>
+      <article className="lorem-text"></article>
       <article className="lorem-text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat,
-          culpa a error vitae quaerat nihil nostrum dolores, ab sunt
-          consequuntur voluptate labore reprehenderit eius cupiditate nulla in
-          rerum explicabo.
-        </p>
-      </article>
-      <article className="lorem-text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat,
-          culpa a error vitae quaerat nihil nostrum dolores, ab sunt
-          consequuntur voluptate labore reprehenderit eius cupiditate nulla in
-          rerum explicabo.
-        </p>
+        {text.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
       </article>
     </section>
   )
