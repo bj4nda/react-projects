@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import data from "./data"
+import {texts} from "./data"
 
 function App() {
   const [count, setCount] = useState(0)
