@@ -4,7 +4,7 @@ import rgbToHex from "./utils"
 const SingleColor = ({rgb, weight, index, hexValue}) => {
   const [alert, setAlert] = useState(false)
   const bcg = rgb.join(",")
-  const hexColor = `${hexValue}`
+  const hexColor = `#${hexValue}`
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAlert(false)
